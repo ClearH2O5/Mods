@@ -1,0 +1,7 @@
+{
+    "rearrange_features.base_description": "Description",
+    "rearrange_features.description": "Ce mod vous permet de réorganiser les fonctionnalités de vos sites web.",
+    "rearrange_features.websites": "Sites web",
+    "rearrange_features.warning": "Attention, avant toute utilisation, nous vous conseillons fortement de faire une copie de la sauvegarde de votre société.",
+    "rearrange_features.explain": "Vous disposez de flèches en bas de chaque fonctionnalité pour les changer de position.<br><br>La nouvelle position des fonctionnalités est automatiquement enregistrée à chaque déplacement."
+}

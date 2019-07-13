@@ -1,0 +1,7 @@
+{
+    "rearrange_features.base_description": "Beschreibung",
+    "rearrange_features.description": "Dieser Mod erlaubt es dir, die Features deiner Webseiten neu anzuordnen",
+    "rearrange_features.websites": "Webseiten",
+    "rearrange_features.warning": "Achtung! Bevor du diesen Mod verwendest, empfehlen wir dir, ein Backup deines Spielstandes zu erstellen.",
+    "rearrange_features.explain": "Unter jedem Feature befinden sich Pfeile, mit denen die Position verändert werden kann.<br><br>Die neue Position des Features wird automatisch gespeichert, sobald du ein Feature neu anordnest."
+}

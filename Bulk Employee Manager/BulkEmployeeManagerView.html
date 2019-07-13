@@ -1,0 +1,72 @@
+<head>
+	<style></style>
+</head>
+
+<h1>
+	<i class="fa fa-user-plus"></i>
+	Bulk Employee Manager
+	<i class="fa fa-times pull-right close-button"
+	   close-all-ui></i>
+</h1>
+
+<div class="padding flex-column"
+	 style="justify-content: center; height: 100%;">
+	<div class="flex-row item-list"
+		 style="min-height: 100%;">
+
+		<div class="item"
+			 style="min-width: 33%; min-height: 100%;">
+
+			<h3 class="text-center"
+				style="margin-bottom: 10px">Employee Bonuses</h3>
+
+			<div class="content">
+
+				<div class="flex-column"
+					 style="justify-content: flex-start;">
+					<div class="flex-row"
+						 style="flex-grow: fill">
+						<table class="medium">
+							<tbody>
+								<tr>
+									<td class="dimmed">Employees</td>
+									<td class="text-right">
+										{{ bemCtrl.employeesToPay | number: 0 }}/{{ bemCtrl.totalEmployees }}
+									</td>
+								</tr>
+								<tr>
+									<td class="dimmed">Amount</td>
+									<td class="text-right">${{ bemCtrl.employeeBonusTotal | number: 0 }}</td>
+								</tr>
+								<tr>
+									<td class="dimmed">Minimum Happiness</td>
+								</tr>
+								<tr>
+									<td class=text-right
+										colspan="2">
+										<rzslider class="grey"
+												  rz-slider-options="bemCtrl.minimumEmployeeMoodForBonusOptions"
+												  rz-slider-model="bemCtrl.minimumEmployeeMoodForBonus"></rzslider>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="flex-row"
+						 style="justify-content: center;">
+						<div class="text-center"
+							 style="margin: 1.5vh;">
+							<button type="button"
+									class="square"
+									ng-class="{ disabled: !bemCtrl.canEmployeeBonusBePaid }"
+									ng-click="bemCtrl.canEmployeeBonusBePaid && bemCtrl.payBonuses()">
+								Pay Bonuses
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</div>

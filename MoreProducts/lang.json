@@ -1,0 +1,22 @@
+{
+  "en": {
+    "gamingservice": "Gaming Service",
+    "searchengine": "Search Engine",
+    "operatingsystem": "Operating System",
+
+    "downloadsystem": "Download System",
+    "sponsoredcontent": "Sponsored Content",
+    "augmentedreality": "Augmented Reality",
+
+    "bootstrap": "Bootstrap",
+    "jquery": "jQuery",
+    "vuejs": "Vue.js",
+    "angularjs": "Angular JS",
+    "symfony": "Symfony",
+    "react": "React",
+    "codeigniter": "CodeIgniter",
+    "angular2": "Angular 2",
+    "nodejs": "Node.js",
+    "angular5": "Angular 5"
+  }
+}

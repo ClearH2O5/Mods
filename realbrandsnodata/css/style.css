@@ -1,0 +1,4 @@
+.dialog .companyLogo.small img, [data-custom-class=dialog] .companyLogo.small img, .dialog .companyLogo img, [data-custom-class=dialog] .companyLogo img {
+    max-width: 1000%;
+    max-height: 1000%;
+}

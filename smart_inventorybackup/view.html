@@ -1,0 +1,64 @@
+<h1>
+    <i class="fa fa-archive"></i>
+    Smart Inventory
+    <i class="fa fa-times pull-right close-button" close-all-ui></i>
+</h1>
+
+<div class="padding smartinventory-dialog" style="overflow: auto;height: 550px;">
+    <div class="flex1">
+        <i localize="about-mod"></i>
+        <br>
+        <br>
+        <span><strong localize="buy"></strong>: <span localize="explain-buy"></span></span>
+        <br>
+        <span><strong localize="sell"></strong>: <span localize="explain-sell"></span></span>
+        <br>
+        <br>
+        <span><h5>Obs</h5> <span localize="buy-winout-product-first"></span></span>
+        <br>
+        <br>
+
+        <div class="flex-row flex2 right" style="float: right;">
+            <span style="font-size: 20px;padding-right: 5px; padding-top: 5px;" localize="search"></span>
+            <input ng-model="smartinventoryCtrl.search" type="text" style="padding: 5px;" />
+        </div>
+
+        <br>
+        <br>
+        <table>
+            <thead>
+            <tr>
+                <td></td>
+                <td localize="components"></td>
+                <td localize="inventory"></td>
+                <td></td>
+                <td></td>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="component in smartinventoryCtrl.componentList()">
+                <td><component class="small" component="::component"></component></td>
+                <td localize="{{ component.name }}"></td>
+                <td>{{ component.inventory }}</td>
+                <td>
+                    <input type="number" ng-model="smartinventoryCtrl.quantity[component.name]" name="{{ component.name }}" style="width: 150px">
+                </td>
+                <td>
+                    <button class="medium" ng-click="smartinventoryCtrl.buyComponents(component.name)"
+                            localize="buy_x"
+                            localize-data-amount-format="currency"
+                            localize-data-amount="{{ smartinventoryCtrl.getPrice(component.name) }}"></button>
+                    <button class="medium" ng-click="smartinventoryCtrl.sellComponents(component.name)"
+                            localize="sell_x"
+                            localize-data-amount-format="currency"
+                            localize-data-amount="{{ smartinventoryCtrl.getPrice(component.name) }}"></button>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+
+    </div>
+
+</div>
+
+<!--<button class="medium" ng-click="smartinventoryCtrl.buyComponents(null, true)" style="width: 150px; margin: 0 auto 0 auto;" localize="buy-all"></button>-->

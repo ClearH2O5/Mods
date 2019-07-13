@@ -1,0 +1,7 @@
+{
+    "rearrange_features.base_description": "Description",
+    "rearrange_features.description": "This mod allows you to rearrange features of your websites.",
+    "rearrange_features.websites": "Websites",
+    "rearrange_features.warning": "Be careful, before any use, we strongly advise you to make a backup of your savegame.",
+    "rearrange_features.explain": "You have arrows at the bottom of each feature to change positions.<br><br>The new feature position is automatically saved each time you move a feature."
+}

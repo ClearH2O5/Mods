@@ -1,0 +1,155 @@
+<!-- by horex -->
+<h1 ng-init="ctrl.tab = 'cheats1';"> 
+    <i class="fa fa-bomb"></i>
+	EZGame | CheatMenu
+    <i class="fa fa-times pull-right close-button" close-all-ui></i>
+</h1>
+
+<div class="padding">
+
+    <ul class="tab-list" style="width: 100%; display: inline-block;">
+        <li ng-class="{ active: ctrl.tab == 'cheats1' }" ng-click="ctrl.tab = 'cheats1'">Cheats #1</li>
+        <li ng-class="{ active: ctrl.tab == 'cheats2' }" ng-click="ctrl.tab = 'cheats2'">Cheats #2</li>
+        <li ng-class="{ active: ctrl.tab == 'logs' }" ng-click="ctrl.tab = 'logs'">Change Log</li>
+    </ul>
+
+	<div ng-if="ctrl.tab == 'cheats1'" class="tab-content" style="min-height:500px;">
+		
+		<hr class="big">
+		<b>Money:</b>
+
+		<div class="Money">
+			<span style="font-size: 20px;left: 5px;"></span>
+
+			<!-- Money -->
+			<button class="medium green" ng-click="cheatCtrl.giveMoney(100000)" style="margin:5px auto;">ADD +100K</button>
+
+			<button class="medium green" ng-click="cheatCtrl.giveMoney(500000)" style="margin:6px auto;">ADD +500K</button>
+
+			<button class="medium green" ng-click="cheatCtrl.giveMoney(1000000)" style="margin:7px auto;">ADD +1M</button>
+
+			<button class="medium green" ng-click="cheatCtrl.giveMoney(5000000)" style="margin:8px auto;">ADD +5M</button>
+
+			<button class="medium green" ng-click="cheatCtrl.giveMoney(10000000)" style="margin:9px auto;">ADD +10M</button>
+
+			<button class="medium green" ng-click="cheatCtrl.giveMoney(100000000)" style="margin:10px auto;">ADD +100M</button>
+		</div>
+		
+		<b>ResearchPoints:</b>
+
+		<div class="rPoints">
+			<span style="font-size: 20px;left: 5px;"></span>
+
+			<!-- researchPoints -->
+			<button class="medium green" ng-click="cheatCtrl.givePoints(100)" style="margin:5px auto;">ADD +100 RP</button>
+			
+			<button class="medium green" ng-click="cheatCtrl.givePoints(500)" style="margin:6px auto;">ADD +500 RP</button>
+			
+			<button class="medium green" ng-click="cheatCtrl.givePoints(1000)" style="margin:7px auto;">ADD +1K RP</button>
+			
+			<button class="medium green" ng-click="cheatCtrl.givePoints(5000)" style="margin:8px auto;">ADD +5K RP</button>
+		</div>
+
+		<b>Unlock Everything:</b>
+		
+		<div class="UnlockAll">
+			<span style="font-size: 20px;left: 5px;"></span>
+
+			<!-- unlockEverything -->
+			<button class="medium green" ng-click="cheatCtrl.unlockAll(true)" style="margin:5px auto;">Unlock Everything</button>
+		</div>
+
+		<b>GetAllComponents:</b>
+		
+		<div class="GetAllComponents">
+			<span style="font-size: 20px;left: 5px;"></span>
+
+			<!-- GetAllComponents -->
+			<input type="number" id="Comp" ng-model="components" style="width: 150px; margin:5px auto">
+			<button class="medium green" ng-click="cheatCtrl.giveComponents(components)" style="margin:5px auto;">Get  {{components}}</button>
+
+		</div>
+
+		<b>EmployeeSpeed:</b>
+
+		<div class="EmployeeSpeed">
+
+			<!-- EmployeeSpeed-->
+			<input type="number" id="ESpeed" ng-model="espeed" style="width: 150px; margin:5px auto">
+			<button class="medium green" ng-click="cheatCtrl.setESpeed(espeed)" style="margin:5px auto;">Set  {{espeed}}%  speed</button>
+			<hr class="big">
+
+		</div>
+
+	</div>
+
+	<div ng-if="ctrl.tab == 'cheats2'" class="tab-content" style="min-height:500px;">
+		
+		<hr class="big">
+		<b>RemoveMoney:</b>
+
+		<div class="Remove money">
+			<span style="font-size: 20px;left: 5px;"></span>
+
+			<!-- Money -->
+			<button class="medium green" ng-click="cheatCtrl.removeMoney(-100000)" style="margin:5px auto;">Remove 100K</button>
+
+			<button class="medium green" ng-click="cheatCtrl.removeMoney(-500000)" style="margin:6px auto;">Remove 500K</button>
+
+			<button class="medium green" ng-click="cheatCtrl.removeMoney(-1000000)" style="margin:7px auto;">Remove 1M</button>
+
+			<button class="medium green" ng-click="cheatCtrl.removeMoney(-5000000)" style="margin:8px auto;">Remove 5M</button>
+
+			<button class="medium green" ng-click="cheatCtrl.removeMoney(-10000000)" style="margin:9px auto;">Remove 10M</button>
+
+			<button class="medium green" ng-click="cheatCtrl.removeMoney(-100000000)" style="margin:10px auto;">Remove 100M</button>
+
+			<button class="big red" ng-click="cheatCtrl.removeAllMoney()" style="margin:10px auto;">Remove All Money</button>
+			<hr class="big">
+
+		</div>
+
+		<b>RemoveRP:</b>
+
+		<div class="Remove rPoints">
+			<span style="font-size: 20px;left: 5px;"></span>
+
+			<!-- researchPoints -->
+			<button class="medium green" ng-click="cheatCtrl.removeRpoints(100)" style="margin:5px auto;">Remove 100 RP</button>
+			
+			<button class="medium green" ng-click="cheatCtrl.removeRpoints(500)" style="margin:6px auto;">Remove 500 RP</button>
+			
+			<button class="medium green" ng-click="cheatCtrl.removeRpoints(1000)" style="margin:7px auto;">Remove 1000 RP</button>
+			
+			<button class="medium green" ng-click="cheatCtrl.removeRpoints(5000)" style="margin:8px auto;">Remove 5000 RP</button>
+
+			<button class="big red" ng-click="cheatCtrl.removeAllrPoints()" style="margin:10px auto;">Remove All rPoints</button>
+			<hr class="big">
+
+		</div>
+
+	</div>
+
+	<div ng-if="ctrl.tab == 'logs'" class="tab-content" style="min-height:500px;">
+
+		<hr class="big">
+		<p><strong>v0.1 Change Log:</strong>  Added CheatMenu, at the moment you can choose how much money you want to get.</p>
+        <hr class="big">
+        <p><strong>v0.2 Change Log:</strong>  Now you can choose in the CheatMenu how many researchPoints you need.</p>
+        <hr class="big">
+        <p><strong>v0.3 Change Log:</strong>  Added "Unlock Everything" button to CheatMenu.</p>
+        <hr class="big">
+        <p><strong>v0.4 Change Log:</strong>  In the "Cheat Menu" added the function of obtaining all the components in any quantity. Fixed Bugs.</p>
+        <hr class="big">
+        <p><strong>v0.5 Change Log:</strong>  Added the ability to change the speed of all employees.</p>
+        <hr class="big">
+        <p><strong>v0.6 Change Log:</strong>  Added button "ADD +100M", also added button "SkipADay".</p>
+        <hr class="big">
+        <p><strong>v0.7 Change Log:</strong>  Added third tab "Cheats # 2". First changed to "Cheats # 1". </br>
+        									  In the second tab, added features such as: RemoveMoney, RemoveRP. Site management via CheatMenu will be added soon.".</p>
+        <hr class="big">
+
+	</div>
+
+</div>
+<!-- by horex -->

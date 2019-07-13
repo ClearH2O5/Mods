@@ -1,0 +1,48 @@
+<style type="text/css">div.product-features .features{display:grid;grid-template-columns:repeat(3, 32.5%);grid-gap:10px;margin:5px 16px}div.product-features .feature{border:1px solid #c6c8c9;background-color:#dfdfdf;height:340px}div.product-features .feature h2{display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:120%;background-color:rgba(0,0,0,0.1);padding:5px;text-transform:uppercase;text-align:center;margin:0;height:100px}div.product-features .feature h2 .dimmed{font-size:80%;display:flex;align-items:center;justify-content:center}div.product-features .feature h2>span{display:block;width:95%;text-overflow:ellipsis;white-space:nowrap;margin-bottom:5px}div.product-features .feature .content{text-align:center;margin-top:15px}div.product-features .feature .feature-image{width:210px}</style>
+<div class="padding">
+    <p class="alert alert-danger text-center" localize="rearrange_features.warning"></p>
+</div>
+
+<!-- Select website -->
+<div class="padding" style="margin:0 auto;">
+    <div dropdown-select="websites" dropdown-model="selectedWebsite" dropdown-item-label="name" dropdown-onchange="updatedSelectedWebsite(selected)"></div>
+</div>
+
+<!-- Options for website -->
+<div class="padding" ng-show="selectedWebsite !== null;">
+    <div class="padding">
+        <p class="alert alert-info text-center" localize="rearrange_features.explain"></p>
+        <div class="product-features">
+            <!-- Features -->
+            <div class="features">
+                <!-- Feature -->
+                <div class="feature" ng-repeat="feature in productFeatures track by feature.instance.id">
+                    <h2>
+                        <div class="flex-super-center margin-bottom">
+                            <span>{{ feature.friendlyName}}</span>
+                        </div>
+                        <span class="dimmed">
+                            <span ng-if="feature.feature.type == 'Users'" localize="level_amount" localize-data-level="{{ feature.instance.quality.current}}"></span>
+                        </span>
+                    </h2>
+
+                    <div class="content">
+                        <img ng-src="images/featureScreenshots/{{feature.instance.featureName| lowercase }}.png"
+                             class="feature-image">
+                        <div class="text-center">
+                            <div class="margin-top">
+                                <!-- Bottom bar -->
+                                <button class="small pull-left margin-left" ng-show="!$first" ng-click="updateFeaturePosition(feature, -1)">
+                                    <i class="fa fa-arrow-left"></i>
+                                </button>
+                                <button class="small pull-right margin-right" ng-show="!$last" ng-click="updateFeaturePosition(feature, 1)">
+                                    <i class="fa fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

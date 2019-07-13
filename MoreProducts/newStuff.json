@@ -1,0 +1,484 @@
+{
+  "products": [
+    {
+      "faIcon": "fa-gamepad",
+      "name": "GamingService",
+      "features": [
+        "LandingPage",
+        "CommentFunctionality",
+        "PaymentSystem",
+        "ContentManagementSystem",
+        "LoginSystem",
+        "ChatSystem",
+        "DownloadSystem"
+      ],
+      "incomePerUserPerDay": 0.08
+    },
+    {
+      "faIcon": "fa-search",
+      "name": "SearchEngine",
+      "features": [
+        "LandingPage",
+        "SponsoredContent",
+        "LoginSystem",
+        "ContentManagementSystem",
+        "SharingFunctionality",
+        "ImageUpload"
+      ],
+      "incomePerUserPerDay": 0.05
+    },
+    {
+      "faIcon": "fa-desktop",
+      "name": "OperatingSystem",
+      "features": [
+        "LandingPage",
+        "LoginSystem",
+        "ContentManagementSystem",
+        "VideoEditor",
+        "ImageUpload",
+        "ImapService",
+        "AugmentedReality"
+      ],
+      "incomePerUserPerDay": 0.05
+    }
+  ],
+  "features": [
+    {
+      "name": "DownloadSystem",
+      "faIcon": "fa-download",
+      "maxLevel": 5000,
+      "usersFactor": 250,
+      "requirements": {
+        "DatabaseLayer": 1,
+        "BackendModule": 1,
+        "Firewall": 2,
+        "FileSystemComponent": 1,
+        "StorageModule": 1
+      },
+      "employeeLevel": "Expert"
+    },
+    {
+      "name": "SponsoredContent",
+      "faIcon": "fa-money",
+      "maxLevel": 5000,
+      "usersFactor": 100,
+      "requirements": {
+        "AudioFormat": 1,
+        "LocalizationModule": 2,
+        "TextFormat": 2,
+        "VideoFormat": 1
+      },
+      "employeeLevel": "Intermediate"
+    },
+    {
+      "name": "AugmentedReality",
+      "faIcon": "fa-arrows",
+      "maxLevel": 5000,
+      "usersFactor": 125,
+      "requirements": {
+        "VideoPlaybackModule": 2,
+        "UiComponent": 4,
+        "InputModule": 4,
+        "InterfaceModule": 2
+      },
+      "employeeLevel": "Expert"
+    }
+  ],
+  "competitors": [
+    {
+      "id": "42c95439-249c-553b-917a-73e9ec6d12c7",
+      "name": "Steam",
+      "owner": "Valve Inc.",
+      "productTypeName": "GamingService",
+      "users": 1250000000,
+      "version": 520,
+      "logoColorDegree": 100,
+      "logoPath": "images/logos/companies/4.png"
+    },
+    {
+      "id": "4f187c6a-3cad-58ce-b9f8-9f6a81a7da04",
+      "name": "Origin",
+      "owner": "Electronic Farts Cooperation",
+      "productTypeName": "GamingService",
+      "users": 1000,
+      "version": 1,
+      "logoColorDegree": 75,
+      "logoPath": "images/logos/companies/9.png"
+    },
+    {
+      "id": "0aff1286-1d4a-5602-bd17-a18c50213c9c",
+      "name": "Instant Gaming",
+      "owner": "Instant Gaming Inc",
+      "productTypeName": "GamingService",
+      "users": 1250000,
+      "version": 10,
+      "logoColorDegree": 90,
+      "logoPath": "images/logos/companies/16.png"
+    },
+    {
+      "id": "6c791e78-4e7b-5f76-9c16-6d26744ef64a",
+      "name": "G2A",
+      "owner": "U fckng Devs - NO $$4u",
+      "productTypeName": "GamingService",
+      "users": 900000000,
+      "version": 9000,
+      "logoColorDegree": 255,
+      "logoPath": "images/logos/companies/23.png"
+    },
+    {
+      "id": "0e49b3f2-7367-5af9-8e4e-3348bafdb384",
+      "name": "Uplay",
+      "owner": "Ubisoft Holding",
+      "productTypeName": "GamingService",
+      "users": 430000000,
+      "version": 15,
+      "logoColorDegree": 150,
+      "logoPath": "images/logos/companies/30.png"
+    },
+    {
+      "id": "161ae082-2ab2-51a0-8a44-b71a19885bc5",
+      "name": "GOG",
+      "owner": "Good Old Games",
+      "productTypeName": "GamingService",
+      "users": 750000,
+      "version": 1,
+      "logoColorDegree": 30,
+      "logoPath": "images/logos/companies/17.png"
+    },
+    {
+      "id": "8d7fc780-ad31-5887-a717-bd2cd1e94653",
+      "name": "Twitch Game Launcher",
+      "owner": "Amazon",
+      "productTypeName": "GamingService",
+      "users": 650000000,
+      "version": 5,
+      "logoColorDegree": 120,
+      "logoPath": "images/logos/companies/15.png"
+    },
+    {
+      "name": "Google",
+      "owner": "Alphabet",
+      "id": "7e0edbea-f812-5000-8b54-3da03d0c0b57",
+      "productTypeName": "SearchEngine",
+      "users": 3000000000,
+      "version": 11000,
+      "logoColorDegree": 15,
+      "logoPath": "images/logos/companies/6.png"
+    },
+    {
+      "name": "Bing",
+      "owner": "Microsoft",
+      "id": "4872b946-7b53-55fe-b2f9-8721baca6531",
+      "productTypeName": "SearchEngine",
+      "users": 999000000,
+      "version": 500,
+      "logoColorDegree": 60,
+      "logoPath": "images/logos/companies/10.png"
+    },
+    {
+      "name": "Yahoo!",
+      "owner": "Who Cares",
+      "id": "df4f9d9e-ca43-5bb1-a14a-ef7f13ce6b9d",
+      "productTypeName": "SearchEngine",
+      "users": 250000,
+      "version": 512,
+      "logoColorDegree": 219,
+      "logoPath": "images/logos/companies/3.png"
+    },
+    {
+      "name": "DuckDuckGo",
+      "owner": "DuckDuckGo",
+      "id": "66c751cc-3354-50cf-a25c-028cf88d820c",
+      "productTypeName": "SearchEngine",
+      "users": 350000,
+      "version": 10,
+      "logoColorDegree": 150,
+      "logoPath": "images/logos/companies/5.png"
+    },
+    {
+      "name": "Ask.com",
+      "owner": "ASK.com",
+      "id": "d8154369-f044-5b33-a0e2-bad3c0eddb10",
+      "productTypeName": "SearchEngine",
+      "users": 99000,
+      "version": 10,
+      "logoColorDegree": 90,
+      "logoPath": "images/logos/companies/4.png"
+    },
+    {
+      "name": "Baidu",
+      "owner": "Baidu",
+      "id": "9eb2be8c-2504-5774-8b5f-c30fe8167eb2",
+      "productTypeName": "SearchEngine",
+      "users": 800000000,
+      "version": 11,
+      "logoColorDegree": 0,
+      "logoPath": "images/logos/companies/17.png"
+    },
+    {
+      "name": "Yandex",
+      "owner": "Russki",
+      "id": "f8d2200a-10b0-551d-8686-8e7713254467",
+      "productTypeName": "SearchEngine",
+      "users": 150000,
+      "version": 20,
+      "logoColorDegree": 0,
+      "logoPath": "images/logos/companies/13.png"
+    },
+    {
+      "name": "Ecosia",
+      "owner": "Greenpeace",
+      "id": "e237732f-be2d-5f0d-a09e-e2e112bdf0c3",
+      "productTypeName": "SearchEngine",
+      "users": 50000,
+      "version": 50,
+      "logoColorDegree": 40,
+      "logoPath": "images/logos/companies/12.png"
+    },
+    {
+      "name": "AOL Search",
+      "owner": "AOL",
+      "id": "bdedd76a-4e19-552b-b475-115bc90e2383",
+      "productTypeName": "SearchEngine",
+      "users": 25000,
+      "version": 10,
+      "logoColorDegree": 0,
+      "logoPath": "images/logos/companies/28.png"
+    },
+    {
+      "name": "Tor Search",
+      "owner": "Tor",
+      "id": "59f8f3ee-e759-5b84-b488-6311ef5e4566",
+      "productTypeName": "SearchEngine",
+      "users": 80000,
+      "version": 1002,
+      "logoColorDegree": 1000,
+      "logoPath": "images/logos/companies/30.png"
+    },
+    {
+      "name": "Windows",
+      "owner": "Microsoft",
+      "id": "ba79d24d-89f0-52ba-a1ae-5ee91b6884d5",
+      "productTypeName": "OperatingSystem",
+      "users": 1240000000,
+      "version": 10,
+      "logoColorDegree": 150,
+      "logoPath": "images/logos/companies/21.png"
+    },
+    {
+      "name": "OS X",
+      "owner": "Apple",
+      "id": "401a0db8-21d2-59cd-982a-833a63e4d51e",
+      "productTypeName": "OperatingSystem",
+      "users": 129000,
+      "version": 13,
+      "logoColorDegree": 69,
+      "logoPath": "images/logos/companies/24.png"
+    },
+    {
+      "name": "iOS",
+      "owner": "Apple",
+      "id": "c0b77fbe-9bf1-558a-bd56-a2d6d070ac53",
+      "productTypeName": "OperatingSystem",
+      "users": 500000,
+      "version": 11,
+      "logoColorDegree": 175,
+      "logoPath": "images/logos/companies/25.png"
+    },
+    {
+      "name": "Android",
+      "owner": "Alphabet",
+      "id": "8f11347f-7ccb-575d-a898-e4d61271550e",
+      "productTypeName": "OperatingSystem",
+      "users": 2130000000,
+      "version": 8,
+      "logoColorDegree": 225,
+      "logoPath": "images/logos/companies/29.png"
+    },
+    {
+      "name": "Linux",
+      "owner": "Everybody",
+      "id": "deecad29-bfac-55b6-85e5-2e553eb1ca75",
+      "productTypeName": "OperatingSystem",
+      "users": 900000000,
+      "version": 18,
+      "logoColorDegree": 145,
+      "logoPath": "images/logos/companies/27.png"
+    },
+    {
+      "name": "BlackberryOS",
+      "owner": "Blackberry",
+      "id": "9bfcdbfa-32df-5798-a858-09e1297eb7fb",
+      "productTypeName": "OperatingSystem",
+      "users": 90000,
+      "version": 5,
+      "logoColorDegree": 132,
+      "logoPath": "images/logos/companies/31.png"
+    }
+  ],
+  "investors": [
+    {
+      "difficulty": "Hard",
+      "id": "8a4b27ad-b375-53dd-ba60-a48db0e04ec0",
+      "name": "KingOfDog Investments",
+      "share": 75,
+      "upfrontPayment": 5000,
+      "milestones": [
+        {
+          "office": true,
+          "payment": 35000
+        },
+        {
+          "designers": 1,
+          "developers": 1,
+          "leadDevelopers": 1,
+          "payment": 2500
+        },
+        {
+          "users": 5000,
+          "payment": 10000
+        },
+        {
+          "totalFeatures": 2,
+          "payment": 10000
+        },
+        {
+          "users": 50000,
+          "payment": 25000
+        },
+        {
+          "totalFeatures": 4,
+          "payment": 25000
+        },
+        {
+          "designers": 1,
+          "developers": 1,
+          "salesExecutives": 1,
+          "researchers": 1,
+          "leadDevelopers": 1,
+          "managers": 1,
+          "marketers": 1,
+          "hrManager": 1,
+          "payment": 100000
+        },
+        {
+          "valuation": 1000000,
+          "payment": 250000
+        },
+        {
+          "hosting": true,
+          "payment": 275000
+        },
+        {
+          "acquisitions": 1,
+          "payment": 300000
+        },
+        {
+          "acquisitions": 2,
+          "payment": 500000
+        },
+        {
+          "acquisitions": 3,
+          "payment": 1000000
+        },
+        {
+          "top": 1,
+          "payment": 10000000
+        }
+      ]
+    }
+  ],
+  "frameworks": [
+    {
+      "cuPerMs": 0.16,
+      "licenseCost": 0,
+      "maxFeatureLevel": 10,
+      "maxFeatures": 3,
+      "name": "Bootstrap",
+      "logoPath": "",
+      "order": 0,
+      "pricePerUser": 0.00001
+    }, {
+      "cuPerMs": 0.15,
+      "licenseCost": 50000,
+      "maxFeatureLevel": 100,
+      "maxFeatures": 3,
+      "name": "jQuery",
+      "logoPath": "",
+      "order": 1,
+      "pricePerUser": 0.00005
+    }, {
+      "cuPerMs": 0.14,
+      "licenseCost": 125000,
+      "maxFeatureLevel": 250,
+      "maxFeatures": 3,
+      "name": "VueJS",
+      "logoPath": "",
+      "order": 2,
+      "pricePerUser": 0.00008
+    }, {
+      "cuPerMs": 0.12,
+      "licenseCost": 300000,
+      "maxFeatureLevel": 750,
+      "maxFeatures": 6,
+      "name": "AngularJS",
+      "logoPath": "",
+      "order": 3,
+      "pricePerUser": 0.00012
+    }, {
+      "cuPerMs": 0.1,
+      "licenseCost": 4500000,
+      "maxFeatureLevel": 1500,
+      "maxFeatures": 6,
+      "name": "Symfony",
+      "logoPath": "",
+      "order": 4,
+      "pricePerUser": 0.00016
+    }, {
+      "cuPerMs": 0.08,
+      "licenseCost": 670000,
+      "maxFeatureLevel": 3000,
+      "maxFeatures": 6,
+      "name": "React",
+      "logoPath": "",
+      "order": 5,
+      "pricePerUser": 0.00019
+    }, {
+      "cuPerMs": 0.065,
+      "licenseCost": 790000,
+      "maxFeatureLevel": 4500,
+      "maxFeatures": 9,
+      "name": "CodeIgniter",
+      "logoPath": "",
+      "order": 6,
+      "pricePerUser": 0.00023
+    }, {
+      "cuPerMs": 0.05,
+      "licenseCost": 940000,
+      "maxFeatureLevel": 6000,
+      "maxFeatures": 9,
+      "name": "Angular2",
+      "logoPath": "",
+      "order": 7,
+      "pricePerUser": 0.00027
+    }, {
+      "cuPerMs": 0.03,
+      "licenseCost": 1000000,
+      "maxFeatureLevel": 7500,
+      "maxFeatures": 12,
+      "name": "NodeJS",
+      "logoPath": "",
+      "order": 8,
+      "pricePerUser": 0.0003
+    },   {
+      "cuPerMs": 0.01,
+      "licenseCost": 1100000,
+      "maxFeatureLevel": 10000,
+      "maxFeatures": 12,
+      "name": "Angular5",
+      "logoPath": "",
+      "order": 9,
+      "pricePerUser": 0.00035
+    }
+  ]
+}

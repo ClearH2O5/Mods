@@ -1,0 +1,11 @@
+<h1 ng-init="ctrl.tab = 'description';">
+    <i class="fa fa-cubes"></i>
+    Rearrange Features
+    <i class="fa fa-times pull-right close-button" close-all-ui></i>
+</h1>
+
+<div id="main-dialog" class="padding" style="overflow:auto;">
+    <div ng-include="templatePath + '/tabs.html'"></div>
+    <div ng-if="ctrl.tab == 'description'" ng-include="templatePath + '/description.html'" class="tab-content" style="min-height:520px;"></div>
+    <div ng-if="ctrl.tab == 'websites'" ng-include="templatePath + '/websites.html'" ng-init="getAllWebsites();" class="tab-content" style="min-height:520px;"></div>
+</div>
