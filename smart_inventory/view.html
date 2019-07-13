@@ -1,61 +1,50 @@
 ﻿
-/*<!--Revision{23}-->
-<!--More code cleanup and move from WE4~>VSC [REMOVED .autostyle2]-->
-<!--Next revision removes .autostyle completely, finer control needed for now]-->
-<!--Next revision will continue to prepare for remerging with purchase totals [Planned for revision 25]-->*/
-<head>
-<style type="text/css">
-.auto-style1 {margin-bottom:0px}
-.auto-style2 {width:auto;text-align:center}
-</style>
-</head>
-<h1 class="auto-style2">
+<!-- Revision{24} -->
+<!-- //More code cleanup and move from WE4~>VSC [REMOVED all autostyles] -->
+<!-- //Code is looking purrrttyyyy, Wish I could say the same for the in-game window -->
+<!-- //Next revision will continue to prepare for remerging with purchase totals [Postponed for revision 28] -->
+<!------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------>
+	<h1 align="center">
     <i class="fa fa-archive"></i>
     Smart Inventory
-    <i class="fa fa-times pull-right close-button" close-all-ui></i>
-</h1>
-/*<!--Need to add function to function??;)-->
-<!--<button class"medium" ng-click="smartinventoryCtrl.buyComponents(null, true)" style="width: 150px; margin: 0 auto 0 auto;" localize="buy-all"></button>-->*/
-<div class>style:"overflow:auto;height:auto;width:1788px;margin-bottom:0px;"><!--UI SIZE INSIDE WINDOW-->
-	<div class="auto-style2">
+    <i class="fa fa-times pull-right close-button"close-all-ui></i>
+	</h1>
+	<div style="overflow:auto;height:auto;width:2000px;margin-bottom:0px;"><!--UI SIZE INSIDE WINDOW-->
+	<div align="center"style="width:auto">
 	<br>
-	<span style:"font-size:20px;"localize="search"></span>		
-	<input ng-model="smartinventoryCtrl.search"type="text"style:"height:60px;width:800px;">
+	<span style="font-size:20px"localize="search"></span>		
+	<input align="center"ng-model="smartinventoryCtrl.search"type="text"style="height:60px;width:800px">
 	</div>
 	<br>
-	<table style:"width:auto,">
+	<table align="center"style="width:auto">
 	<thead>
 	<tr>
-/*{#1}*/<td style:"height:auto;width:auto"></td>
-/*{#2}*/<td localize="components"style:"text-decoration:underline;height:auto;width:auto;align:left"></td>
-/*{#3}*/<td style:"height:auto;width:auto"></td>
-/*{#4}*/<td style:"height:auto;width:auto"></td>
-/*{#5}*/<td localize="inventory"style="text-decoration:underline;height:auto;width:auto"></td>
-/*{#6}*/<td style:"height:auto;width:auto"></td>
+<!--1--><td align="pull-left"style="height:auto;width:auto"></td>
+<!--2--><td align="pull-left"localize="components"style="text-decoration:underline;height:auto;width:auto"></td>
+<!--3--><td align="center"style="height:auto;width:auto"></td>
+<!--4--><td align="center"style="height:auto;width:auto"></td>
+<!--5--><td align="right"localize="inventory"style="text-decoration:underline;height:auto;width:auto"></td>
+<!--6--><td align="right"style="height:auto;width:auto"></td>
 	</tr>
 	</thead>
 	<tbody>
 	<tr ng-repeat="component in smartinventoryCtrl.componentList()">
-	   <!--#1--><td style:"height:auto;width:auto;align:right">
-	  <component class="small" component="::component"></component></td>
-	   <!--#2--><td localize="{{ component.name }}" style:"height:auto;width:auto"></td>
-	   <!--#3--><td style:"height:auto;width:auto"></td>
-	   <!--#4--><td style:"height:auto;width:auto"></td>
-	   <!--#5--><td style:"height:auto;width:200px">{{ component.inventory }}
-				<em>
-				<input type="number"style="height:60px;width:200px;"ng-model="smartinventoryCtrl.quantity[component.name]"name="{{ component.name }}">
-				</em>
-				</td>
-	   <!--#6--><td style:"height:auto;width:410px;">
-				<button class="medium"ng-click="smartinventoryCtrl.buyComponents(component.name)"style:"width:190px"localize="Buy"> 	
-                <br>
-                </button>
-				<button class="medium"ng-click="smartinventoryCtrl.sellComponents(component.name)"style:"width:190px"localize="Sell">
-				</button>
-              	</td>
-			</tr>
-		</tbody>
+<!--1--><td align="left"style="height:auto;width:auto"><component class="small"component="::component"></component></td>
+<!--2--><td align="left"localize="{{component.name}}"style="height:auto;width:auto"></td>
+<!--3--><td align="center"style="height:auto;width:auto"></td>
+<!--4--><td align="center"style="height:auto;width:auto"></td>
+<!--5--><td align="center"style="height:auto;width:200px">{{component.inventory}}
+	 <em><input align="right"type="number"style="height:60px;width:200px"ng-model="smartinventoryCtrl.quantity[component.name]"name="{{ component.name }}"></em></td>
+<!--6--><td align="right"style="height:auto;width:410px">
+	 <button class="medium"ng-click="smartinventoryCtrl.buyComponents(component.name)"style="width:190px"localize="Buy"></button>
+    <br>
+	 <button class="medium"ng-click="smartinventoryCtrl.sellComponents(component.name)"style="width:190px"localize="Sell"></button>
+    </td>
+	</tr>
+	</tbody>
 	</table> 
-</div>
+	</div>
+<!------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------>
+<!--Need to add function to function??;)button class="medium" ng-click="smartinventoryCtrl.buyComponents(null, true)"style="width: 150px; margin: 0 auto 0 auto;" localize="buy-all"/button>-->
 
-<!--Revised by Austin Clearwater 07/12/2019-->
+<!--Revised by Austin Clearwater 07/13/2019-->
