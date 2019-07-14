@@ -16,7 +16,7 @@ exports.initialize = (modPath) => {
             name: 'smartinventory',
             viewPath: `${modPath}/view.html`,
             controller: ["$scope", "$rootScope", "$timeout", function ($scope, $rootScope) {
-                $('.smartinventory-dialog').parent().css("width",1000);
+                $('.smartinventory-dialog').parent().css("width", 1910);
                 this.search = '';
                 this.quantity = [];
 
@@ -123,17 +123,12 @@ exports.initialize = (modPath) => {
 }
 
 exports.onLoadGame = () => {
-   
+     $rootScope = GetRootScope();
         Language['search'] = "Search";
         Language['buy'] = "Buy";
         Language['sell'] = "Sell";
         Language['sold-component-items'] = "You have sold {quantity} components ({componentname})";
-        Language['buy-component-items'] = "You have purchased {quantity} components ({componentname})";
-        Language['buy-winout-product-first'] = "It is necessary to at least have created one of each component to be able to buy more units.";
-        Language['explain-buy'] = "You can buy in only whole and positive values. <u>(1,5,10,100)</u>.";
-        Language['explain-sell'] = "You can sell in whole values, negative or positive.<u>(1,5,10,100) or ( -1, -5, -10, -100)</u>";
-        Language['about-mod'] = "Here you will be able to make purchases and sales of components to accelerate the growth of your <strong>Startup</strong>, " +
-            "either with purchases for <strong>resource upgrades</strong> or selling components to help with your <strong>company's bank balance</strong>";
+        Language['buy-component-items'] = "You have purchased {quantity} components ({componentname})";     
     }
 
 
