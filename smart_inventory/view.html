@@ -1,14 +1,14 @@
 ﻿
-<!-- Revision{25} -->
-<!-- //Complete recode -->
-<!-- //First revision testing merge with purchase totals[Not active yet] -->
+<!-- Revision{26} -->
+<!-- //Quick Push -->
+<!-- //Second revision testing merge with purchase totals[Somewhat Usable] -->
 <!-- //Functions have not been tested, focusing on visual appeal-->
 <!------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------>
 
 	<h1>
 	<div style="text-align:center">
     <i class="fa fa-archive"></i>
-	Smart Inventory {Revision 25} H2O
+	Smart Inventory {Revision 26} H2O
 	<i class="fa fa-times pull-right close-button"close-all-ui></i>
 	</div>
 	</h1>
@@ -29,37 +29,39 @@
 <!--2--><td localize="components"style="text-decoration:underline"></td>
 <!--3--><td localize="inventory"style="text-decoration:underline"></td>
 <!--4--><td></td>
-<!--5--><td></td>
+<!--4--><td></td>
+<!--5--><td localize="purchase"style="text-decoration:underline"></td>
 	</tr>
 	</thead>
 	
 	<tbody>
 	<tr ng-repeat="component in smartinventoryCtrl.componentList()">
-<!--1--><td><component class="small"component="::component"></component></td><!--image of component-->
+<!--1--><div style="float:left">
+		<td><component class="small"component="::component"></component></td><!--image of component-->
 <!--2--><td localize="{{component.name}}"></td><!--Names of components-->
 <!--3--><td>{{component.inventory}}<!--Visible quantity--></td>
-<!--4--><td>
-			</td>		  
- <!--5--><td>
-		   <div style="float:right;padding-right:10px">
-			<td style="width:10px"	 
-				localize-data-amount-format="currency"
-				localize-data-amount="{{ smartinventoryCtrl.getPrice(component.name) }}"
-				localize-data-amount-format="currency"
-				localize-data-amount="{{ smartinventoryCtrl.getPrice(component.name) }}">
-			
-				<input type="number" 
+<!--4--></div>
+		<td></td>		  
+		<td></td>
+		<td></td>
+		<td></td>
+		<!--5-->
+		   <td>
+				${{ smartinventoryCtrl.getPrice(component.name) }}
+		   </td>
+		   <div style="float:right"></div>
+			<td><input type="number" 
 			   	 ng-model="smartinventoryCtrl.quantity[component.name]"name="{{ component.name }}"
 			 	 style="height:60px;width:200px">
 			 			
 			<button class="medium"ng-click="smartinventoryCtrl.buyComponents(component.name)"
-				 localize="buy"style="width:170px"></button>
+				 localize="buy"style="width:150px"></button>
 		 
 		    <button class="medium"ng-click="smartinventoryCtrl.sellComponents(component.name)"
-			     localize="sell"style="width:170px"></button>
-		   </div>
-		</td>
-	</tr>
+			     localize="sell"style="width:150px"></button>
+		 </td>
+		</div>
+		</tr>
 	</tbody>
 	</table> 
 	</div>

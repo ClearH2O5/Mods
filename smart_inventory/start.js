@@ -129,6 +129,7 @@ exports.onLoadGame = () => {
         Language['sell'] = "Sell";
         Language['sold-component-items'] = "You have sold {quantity} components ({componentname})";
         Language['buy-component-items'] = "You have purchased {quantity} components ({componentname})";     
+        Language['purchase'] = "Buy/Sell Total";
     }
 
 
