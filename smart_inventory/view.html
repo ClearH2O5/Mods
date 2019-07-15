@@ -1,19 +1,19 @@
 ﻿
-<!-- Revision{27} -->
-<!-- //Still adjusting visual appeal as I move towards a stable release -->
-<!-- //Third revision testing merge with purchase totals[Show, but not final appearance] -->
+<!-- Revision{28} -->
+<!-- //Still adjusting visual appeal as I move towards a stable release[SWITCH TO SMALLER UI] -->
+<!-- //Fourth revision testing merge with purchase totals[WORKS WELL, also limits characters to prevent expansion of UI] -->
 <!-- //Functions have not been tested, focusing on visual appeal-->
 <!------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------>
 
 	<h1>
 	<div style="text-align:center">
     <i class="fa fa-archive"></i>
-	Smart Inventory {Revision 27} H2O
+	Smart Inventory {Revision 28} H2O
 	<i class="fa fa-times pull-right close-button"close-all-ui></i>
 	</div>
 	</h1>
 	<h6>
-	<div style="float:none;padding-left:400px;padding-right:400px;height:70px">   
+	<div style="float:none;padding-left:320px;padding-right:320px;height:40px">   
 	<form><input ng-model="smartinventoryCtrl.search"type="text"style="height:65px"
 				placeholder="search for components..."/>
 	</form>
@@ -21,7 +21,7 @@
 	</h6>
 	
 	<div class="padding  smartinventory-dialog"
-		 style="overflow:auto;height:auto;width:auto;margin-bottom:0px;">
+		 style="overflow:auto;height:auto;width:1367px;margin-bottom:0px;">
 	
 	<table>
 	<thead>
@@ -34,34 +34,34 @@
 <!--5--><td></td>
         <td></td>
 		<td localize="purchase"style="text-decoration:underline;text-align:center"></td>
-</tr>
+	</tr>
 	</thead>
 	
 	<tbody>
 	<tr ng-repeat="component in smartinventoryCtrl.componentList()">
 <!--1--><div style="float:left;margin:0px">
-		<td><component class="small"component="::component"style="width:90px"></component></td><!--image of component-->
-<!--2--><td localize="{{component.name}}"style="width:100px;padding-left:20px;padding-right:0px"></td><!--Names of components-->
-<!--3--><td style="float:none;text-align:center">{{component.inventory}}</td><!--Visible quantity-->
+		<td><component class="small"component="::component"style="width:120px"></component></td><!--image of component-->
+<!--2--><td localize="{{component.name}}"style="width:110px;padding-left:10px;padding-right:0px"></td><!--Names of components-->
+<!--3--><td style="float:none;text-align:center;width:170px">{{component.inventory}}</td><!--Visible quantity-->
 <!--4--></div>
 		<td></td>		  
 		<td></td>
 		<td></td>
 		<td></td>
 		<!--5-->
-		   <td style="float:none;text-align:center;width:200px">
+		   <td style="float:none;text-align:center;width:300px">
 				${{ smartinventoryCtrl.getPrice(component.name) }}
 		   </td>
-		   <div style="float:right"></div>
-			<td><input type="number" 
+		   <div style="float:right">
+			<td><input type="number"max="99999999"
 			   	 ng-model="smartinventoryCtrl.quantity[component.name]"name="{{ component.name }}"
-			 	 style="height:60px;width:180px">
+			 	 style="height:60px;width:200px">
 			 			
 			<button class="medium"ng-click="smartinventoryCtrl.buyComponents(component.name)"
-				 localize="buy"style="width:160px"></button>
+				 localize="buy"style="width:162px"></button>
 		 
-		    <button class="medium"ng-click="smartinventoryCtrl.sellComponents(component.name)"
-			     localize="sell"style="width:160px"></button>
+		    <button class="small red"ng-click="smartinventoryCtrl.sellComponents(component.name)"
+					localize="sell"style="color:white;width:195px"></button>
 		 </td>
 		</div>
 		</tr>

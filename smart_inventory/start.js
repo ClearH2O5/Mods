@@ -16,7 +16,7 @@ exports.initialize = (modPath) => {
             name: 'smartinventory',
             viewPath: `${modPath}/view.html`,
             controller: ["$scope", "$rootScope", "$timeout", function ($scope, $rootScope) {
-                $('.smartinventory-dialog').parent().css("width", 1720);
+                $('.smartinventory-dialog').parent().css("width", 1373);
                 this.search = '';
                 this.quantity = [];
 
