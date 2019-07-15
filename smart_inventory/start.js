@@ -16,7 +16,7 @@ exports.initialize = (modPath) => {
             name: 'smartinventory',
             viewPath: `${modPath}/view.html`,
             controller: ["$scope", "$rootScope", "$timeout", function ($scope, $rootScope) {
-                $('.smartinventory-dialog').parent().css("width", 1910);
+                $('.smartinventory-dialog').parent().css("width", 1720);
                 this.search = '';
                 this.quantity = [];
 
@@ -129,7 +129,7 @@ exports.onLoadGame = () => {
         Language['sell'] = "Sell";
         Language['sold-component-items'] = "You have sold {quantity} components ({componentname})";
         Language['buy-component-items'] = "You have purchased {quantity} components ({componentname})";     
-        Language['purchase'] = "Buy/Sell Total";
+        Language['purchase'] = "Total";
     }
 
 

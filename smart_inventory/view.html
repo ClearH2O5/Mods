@@ -1,64 +1,67 @@
 ﻿
-<!-- Revision{26} -->
-<!-- //Quick Push -->
-<!-- //Second revision testing merge with purchase totals[Somewhat Usable] -->
+<!-- Revision{27} -->
+<!-- //Still adjusting visual appeal as I move towards a stable release -->
+<!-- //Third revision testing merge with purchase totals[Show, but not final appearance] -->
 <!-- //Functions have not been tested, focusing on visual appeal-->
 <!------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------>
 
 	<h1>
 	<div style="text-align:center">
     <i class="fa fa-archive"></i>
-	Smart Inventory {Revision 26} H2O
+	Smart Inventory {Revision 27} H2O
 	<i class="fa fa-times pull-right close-button"close-all-ui></i>
 	</div>
 	</h1>
 	<h6>
-	<div style="float:none;padding-left:400px;padding-right:400px">   
-	<form><input ng-model="smartinventoryCtrl.search"type="text"
-				placeholder="Search..."/>
+	<div style="float:none;padding-left:400px;padding-right:400px;height:70px">   
+	<form><input ng-model="smartinventoryCtrl.search"type="text"style="height:65px"
+				placeholder="search for components..."/>
 	</form>
 	</div>		
 	</h6>
 	
-	<div class="padding  smartinventory-dialog"style="overflow:auto;height:auto;margin-bottom:0px;">
+	<div class="padding  smartinventory-dialog"
+		 style="overflow:auto;height:auto;width:auto;margin-bottom:0px;">
 	
 	<table>
 	<thead>
 	<tr>
 <!--1--><td></td>
 <!--2--><td localize="components"style="text-decoration:underline"></td>
-<!--3--><td localize="inventory"style="text-decoration:underline"></td>
+<!--3--><td localize="inventory"style="text-decoration:underline;text-align:center"></td>
 <!--4--><td></td>
 <!--4--><td></td>
-<!--5--><td localize="purchase"style="text-decoration:underline"></td>
-	</tr>
+<!--5--><td></td>
+        <td></td>
+		<td localize="purchase"style="text-decoration:underline;text-align:center"></td>
+</tr>
 	</thead>
 	
 	<tbody>
 	<tr ng-repeat="component in smartinventoryCtrl.componentList()">
-<!--1--><div style="float:left">
-		<td><component class="small"component="::component"></component></td><!--image of component-->
-<!--2--><td localize="{{component.name}}"></td><!--Names of components-->
-<!--3--><td>{{component.inventory}}<!--Visible quantity--></td>
+<!--1--><div style="float:left;margin:0px">
+		<td><component class="small"component="::component"style="width:90px"></component></td><!--image of component-->
+<!--2--><td localize="{{component.name}}"style="width:100px;padding-left:20px;padding-right:0px"></td><!--Names of components-->
+<!--3--><td style="float:none;text-align:center">{{component.inventory}}</td><!--Visible quantity-->
 <!--4--></div>
 		<td></td>		  
 		<td></td>
 		<td></td>
 		<td></td>
 		<!--5-->
-		   <td>
+		   <td style="float:none;text-align:center;width:200px">
 				${{ smartinventoryCtrl.getPrice(component.name) }}
 		   </td>
 		   <div style="float:right"></div>
 			<td><input type="number" 
 			   	 ng-model="smartinventoryCtrl.quantity[component.name]"name="{{ component.name }}"
-			 	 style="height:60px;width:200px">
+			 	 style="height:60px;width:180px">
 			 			
 			<button class="medium"ng-click="smartinventoryCtrl.buyComponents(component.name)"
-				 localize="buy"style="width:150px"></button>
+				 localize="buy"style="width:160px"></button>
 		 
 		    <button class="medium"ng-click="smartinventoryCtrl.sellComponents(component.name)"
-			     localize="sell"style="width:150px"></button>
+			     localize="sell"style="width:160px"></button>
 		 </td>
 		</div>
 		</tr>
@@ -68,4 +71,4 @@
 <!------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------>
 <!--Need to add function to function??;)button class="medium" ng-click="smartinventoryCtrl.buyComponents(null, true)"style="width: 150px; margin: 0 auto 0 auto;" localize="buy-all"/button>-->
 
-<!--Revised by Austin Clearwater 07/14/2019-->
+<!--Revised by Austin Clearwater 07/15/2019-->
