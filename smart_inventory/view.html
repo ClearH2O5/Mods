@@ -41,7 +41,7 @@
 	<tr ng-repeat="component in smartinventoryCtrl.componentList()">
 <!--1--><div style="float:left;margin:0px">
 		<td><component class="small"component="::component"style="width:120px"></component></td><!--image of component-->
-<!--2--><td localize="{{component.name}}"style="width:110px;padding-left:10px;padding-right:0px"></td><!--Names of components-->
+<!--2--><td localize="{{component.name}}"style="width:90px"></td><!--Names of components-->
 <!--3--><td style="float:none;text-align:center;width:170px">{{component.inventory}}</td><!--Visible quantity-->
 <!--4--></div>
 		<td></td>		  
@@ -49,7 +49,7 @@
 		<td></td>
 		<td></td>
 		<!--5-->
-		   <td style="float:none;text-align:center;width:300px">
+		   <td style="float:none;text-align:center;width:290px">
 				${{ smartinventoryCtrl.getPrice(component.name) }}
 		   </td>
 		   <div style="float:right">
@@ -58,10 +58,10 @@
 			 	 style="height:60px;width:200px">
 			 			
 			<button class="medium"ng-click="smartinventoryCtrl.buyComponents(component.name)"
-				 localize="buy"style="width:162px"></button>
+				 localize="buy"style="width:162px;height:72px"></button>
 		 
 		    <button class="small red"ng-click="smartinventoryCtrl.sellComponents(component.name)"
-					localize="sell"style="color:white;width:195px"></button>
+					localize="sell"style="color:white;width:195px;height:52px"></button>
 		 </td>
 		</div>
 		</tr>
