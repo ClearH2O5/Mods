@@ -206,41 +206,8 @@ exports.onLoadGame = settings => {
     Language['struts'] = 'Struts 2';
     Language['angular'] = 'AngularJS 2';
     Language['javaee'] = 'Java EE';
-    if (settings) {
-        if (!scope.options.mts_mod || !scope.options.mts_mod.loadedBefore || !scope.options.mts_mod.seenNewInstructions) {
-            scope.sendMail('Jiří Bartušek', 'More Tech Stuff - quick thanks',
-                `Hi,
-        
-        I see, that you have just subscribed to my mod. Thanks for that!
-        
-        Don't forget, if you have any new ideas for something I should add or fix, please, let me know at mod's Steam discussion.
-        
-        Take care,
-        
-        Jiří Bartušek a.k.a. bartusek27`
-            );
-            scope.options.mts_mod = {loadedBefore: true, seenNewInstructions: true, seenUpdate3: false};
-            Helpers.ConsoleInfo(`[MOD] More Tech Stuff: First-time email has been sent.`);
-            scope.saveOptions();
-        }
-        if (scope.options.mts_mod && !scope.options.mts_mod.seenUpdate3 && scope.options.mts_mod.loadedBefore) {
-            scope.sendMail('Jiří Bartušek', 'More Tech Stuff - new major version',
-                `Hi,
-        
-        MTS Mod has just been updated to a major version v2! It has already been installed to your
-        game, so there is no need to do anything!
-        
-        In case you are wondering, what changes has been made, visit official Workshop page!
-        
-        Take care,
-        
-        Jiří Bartušek a.k.a. bartusek27`
-            );
-            scope.options.mts_mod = {loadedBefore: true, seenNewInstructions: true, seenUpdate3: true};
-            Helpers.ConsoleInfo(`[MOD] More Tech Stuff: First-time email has been sent.`);
-            scope.saveOptions();
-        }
-    }
+   
+    
 };
 
 exports.onUnsubscribe = done => {

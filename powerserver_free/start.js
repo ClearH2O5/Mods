@@ -9,7 +9,7 @@ exports.initialize = (modPath) =>{
 
 	RackDevices.WebbyClearwater = {
 		"name":	"Web by Clearwater",
-		"units": 8,
+		"units": 4,
 		"price": 1,
 		"clockRate": 100,
 		"power": 1000,
@@ -25,7 +25,7 @@ exports.initialize = (modPath) =>{
 
 	RackDevices.CachebyClearwater = {
 		"name": "Cache by Clearwater",
-		"units": 8,
+		"units": 4,
 		"price": 1,
 		"clockRate":100,
 		"power":1000,
@@ -41,7 +41,7 @@ exports.initialize = (modPath) =>{
 
 	RackDevices.DatabyClearwater = {
 		"name": "Data by Clearwater",
-		"units": 8,
+		"units": 4,
 		"price": 1,
 		"clockRate": 100,
 		"power": 1000,
@@ -88,7 +88,7 @@ exports.onBackgroundWorkerStart = () => {
 
 	RackDevices.WebbyClearwater = {
 		"name":	"Web by Clearwater",
-		"units": 8,
+		"units": 4,
 		"price": 1,
 		"clockRate": 100,
 		"power": 1000,
@@ -104,7 +104,7 @@ exports.onBackgroundWorkerStart = () => {
 
 	RackDevices.CachebyClearwater = {
 		"name": "Cache by Clearwater",
-		"units": 8,
+		"units": 4,
 		"price": 1,
 		"clockRate":100,
 		"power":1000,
@@ -120,7 +120,7 @@ exports.onBackgroundWorkerStart = () => {
 
 	RackDevices.DatabyClearwater = {
 		"name": "Data by Clearwater",
-		"units": 8,
+		"units": 4,
 		"price": 1,
 		"clockRate": 100,
 		"power": 1000,

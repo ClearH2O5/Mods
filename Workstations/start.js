@@ -2,15 +2,15 @@ let _modPath;
 
 exports.initialize = (modPath) =>{
 
-Buildings[0].workstations = 12;	
-Buildings[0].floors = 1;
-Buildings[1].workstations = 25;	
-Buildings[1].floors = 1;
-Buildings[2].workstations = 65;	
-Buildings[2].floors = 1;
-Buildings[3].workstations = 600;	
-Buildings[3].floors = 10;
-Buildings[7].workstations = 1000;
+// Buildings[0].workstations = 12;	
+Buildings[0].floors = 2;
+// Buildings[1].workstations = 25;	
+Buildings[1].floors = 2;
+// Buildings[2].workstations = 65;	
+Buildings[2].floors = 4;
+// Buildings[3].workstations = 600;	
+Buildings[3].floors = 7;
+// Buildings[7].workstations = 1000;
 
 exports.onLoadGame = settings => { };
 exports.onNewHour = settings => { };
