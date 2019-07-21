@@ -1,0 +1,10 @@
+<td><component class="small" component="::component"></component></td>
+<td localize="{{ component.name }}"></td>
+<td>{{ component.stock }}</td>
+<td>
+    <input type="number" ng-model="manageinventoryCtrl.quantity[component.name]" name="{{ component.name }}" min="1" style="width: 100px">
+</td>
+<td>
+    <button class="medium green" ng-show="component.can_buy" ng-click="manageinventoryCtrl.manageComponent(component.name, 'buy')" localize="buy_x" localize-data-amount-format="currency" localize-data-amount="{{ (manageinventoryCtrl.getUnitPrice(component.name, 'buy') * manageinventoryCtrl.quantity[component.name]) }}"></button>
+    <button class="medium red" ng-click="manageinventoryCtrl.manageComponent(component.name, 'sell')" localize="sell_x" localize-data-amount-format="currency" localize-data-amount="{{ (manageinventoryCtrl.getUnitPrice(component.name, 'sell') * manageinventoryCtrl.quantity[component.name]) }}"></button>
+</td>
