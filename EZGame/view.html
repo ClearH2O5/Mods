@@ -5,12 +5,11 @@
     <i class="fa fa-times pull-right close-button" close-all-ui></i>
 </h1>
 
-<div class="padding">
+<div class="padding"style="width:1800px;height:500px;">
 
     <ul class="tab-list" style="width: 100%; display: inline-block;">
         <li ng-class="{ active: ctrl.tab == 'cheats1' }" ng-click="ctrl.tab = 'cheats1'">Cheats #1</li>
         <li ng-class="{ active: ctrl.tab == 'cheats2' }" ng-click="ctrl.tab = 'cheats2'">Cheats #2</li>
-        <li ng-class="{ active: ctrl.tab == 'logs' }" ng-click="ctrl.tab = 'logs'">Change Log</li>
     </ul>
 
 	<div ng-if="ctrl.tab == 'cheats1'" class="tab-content" style="min-height:500px;">
@@ -130,26 +129,6 @@
 
 	</div>
 
-	<div ng-if="ctrl.tab == 'logs'" class="tab-content" style="min-height:500px;">
-
-		<hr class="big">
-		<p><strong>v0.1 Change Log:</strong>  Added CheatMenu, at the moment you can choose how much money you want to get.</p>
-        <hr class="big">
-        <p><strong>v0.2 Change Log:</strong>  Now you can choose in the CheatMenu how many researchPoints you need.</p>
-        <hr class="big">
-        <p><strong>v0.3 Change Log:</strong>  Added "Unlock Everything" button to CheatMenu.</p>
-        <hr class="big">
-        <p><strong>v0.4 Change Log:</strong>  In the "Cheat Menu" added the function of obtaining all the components in any quantity. Fixed Bugs.</p>
-        <hr class="big">
-        <p><strong>v0.5 Change Log:</strong>  Added the ability to change the speed of all employees.</p>
-        <hr class="big">
-        <p><strong>v0.6 Change Log:</strong>  Added button "ADD +100M", also added button "SkipADay".</p>
-        <hr class="big">
-        <p><strong>v0.7 Change Log:</strong>  Added third tab "Cheats # 2". First changed to "Cheats # 1". </br>
-        									  In the second tab, added features such as: RemoveMoney, RemoveRP. Site management via CheatMenu will be added soon.".</p>
-        <hr class="big">
-
-	</div>
 
 </div>
 <!-- by horex -->

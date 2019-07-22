@@ -1,0 +1,7 @@
+body > ui #floor-selector {
+    z-index: 110000 !important;
+    bottom: 170px !important;
+}
+body > ui .ui-center {
+	z-index:99999;
+}
