@@ -42,7 +42,7 @@ exports.initialize = (modPath) => {
                 name: viewName,
                 viewPath: `${modPath}/views/main.html`,
                 controller: ["$scope", "$timeout", function ($scope, $timeout) {
-                        $('#main-dialog').parent().css('width', 1100);
+                        $('#main-dialog').parent().css('width', 1800);
                         // Add Languages Module to the scope
                         $scope.languagesModule = languagesModule;
                         this.quantity = [];
