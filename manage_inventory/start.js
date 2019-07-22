@@ -140,12 +140,12 @@ exports.initialize = (modPath) => {
                             let multipliers = {
                                 Beginner: 1,
                                 Intermediate: 2,
-                                Expert: 5
+                                Expert: 3
                             };
                             let salary = {
-                                Beginner: 13000,
-                                Intermediate: 18000,
-                                Expert: 23000
+                                Beginner: 8000,
+                                Intermediate: 10000,
+                                Expert: 13000
                             };
                             // Approx. hours worked by month (7 hours per day - 5 working days in a week)
                             let monthlyHours = 152;
@@ -155,7 +155,7 @@ exports.initialize = (modPath) => {
                             let price = (rs.Helpers.CalculateComponentProductionHours(component) * salary[component.employeeLevel] / monthlyHours) * multipliers[component.employeeLevel];
                             // If action is buy, add a 5x multiplier
                             if (action === 'buy') {
-                                price *= 5;
+                                price *= 3;
                             }
 
                             return parseInt(price);
