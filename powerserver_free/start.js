@@ -3,19 +3,19 @@ let _modPath;
 exports.initialize = (modPath) =>{
 	_modPath = modPath;
 
-	RackDeviceNames.WebbyClearwater = 'Web by Clearwater';
-	RackDeviceNames.CachebyClearwater = 'Cache by Clearwater';
-	RackDeviceNames.DatabyClearwater = 'Data by Clearwater';
+	RackDeviceNames.WebbyClearwater = 'webbyclearwater';
+	RackDeviceNames.CachebyClearwater = 'cachebyclearwater';
+	RackDeviceNames.DatabyClearwater = 'databyclearwater';
 
 	RackDevices.WebbyClearwater = {
-		"name":	"Web by Clearwater",
+		"name":	"WebbyClearwater",
 		"units": 4,
 		"price": 1,
 		"clockRate": 100,
 		"power": 1000,
 		"producedHeat": 10,
 		"webserverThroughput": 1000000,
-		"url":"images/racks/WebserverX.png",
+		// "url":"images/racks/WebserverX.png",
 		"requirements": {
 			"Firewall": 1,
 			"VirtualHardware": 1,
@@ -24,14 +24,14 @@ exports.initialize = (modPath) =>{
 	};
 
 	RackDevices.CachebyClearwater = {
-		"name": "Cache by Clearwater",
+		"name": "CachebyClearwater",
 		"units": 4,
 		"price": 1,
 		"clockRate":100,
 		"power":1000,
 		"producedHeat" :10,
 		"cacheThroughput":1000000,
-		"url":"images/racks/CacheserverX.png",
+		// "url":"images/racks/CacheserverX.png",
 		"requirements": {
 			"Firewall":1,
 			"VirtualHardware":1,
@@ -40,14 +40,14 @@ exports.initialize = (modPath) =>{
 	};
 
 	RackDevices.DatabyClearwater = {
-		"name": "Data by Clearwater",
+		"name": "DatabyClearwater",
 		"units": 4,
 		"price": 1,
 		"clockRate": 100,
 		"power": 1000,
 		"producedHeat": 10,
 		"databaseThroughput": 1000000,
-		"url":"images/racks/DatabaseserverX.png",
+		// "url":"images/racks/DatabaseserverX.png",
 		"requirements": {
 			"Firewall": 1,
 			"VirtualHardware": 1,
@@ -59,42 +59,42 @@ exports.initialize = (modPath) =>{
 	ResearchItems.push({
 			category: "Hosting",
 			faIcon: "fa-server",
-			name: "Servers by Clearwater",
+			name: "ClearwaterIncServerPack",
 			points: 1,
 			unlockType: "RackDevices",
 			unlocks: [
-				"Web by Clearwater",
-				"Cache by Clearwater",
-				"Data by Clearwater",
+				"WebbyClearwater",
+				"CachebyClearwater",
+				"DatabyClearwater",
 			]
 	});
 
 };
 
 exports.onLoadGame = settings => {
-	Language['Clearwater Frameworks'] = 'Clearwater Framework';
-	Language['Web by Clearwater'] = 'Clearwater Inc. Webserver';
-	Language['Cache by Clearwater'] = 'Clearwater Inc. Cache Runners';
-	Language['Data by Clearwater'] = 'Clearwater Inc. DataStorage';
-	Language['Clearwater Inc. ServerPack'] = 'Clearwater Inc. ServerPack';
-	Language['Clearwater Inc. ServerPack_description'] = 'Clearwater Inc. enjoyed Bobnards work so much we wanted to improve it ;)';
+	// Language['ClearwaterFrameworks'] = 'Clearwater Framework';
+	Language['webbyclearwater'] = 'Clearwater Inc Webserver';
+	Language['cachebyclearwater'] = 'Clearwater Inc Cache Runners';
+	Language['databyclearwater'] = 'Clearwater Inc DataStorage';
+	Language['clearwaterincserverpack'] = 'Clearwater Inc ServerPack';
+	Language['clearwaterincserverpack_description'] = 'Clearwater Inc enjoyed Bobnards work so much we wanted to improve it';
 
 }
 
 exports.onBackgroundWorkerStart = () => {
-	RackDeviceNames.WebbyClearwater = 'Web by Clearwater';
-	RackDeviceNames.CachebyClearwater = 'Cache by Clearwater';
-	RackDeviceNames.DatabyClearwater = 'Data by Clearwater';
+	RackDeviceNames.WebbyClearwater = 'webbyclearwater';
+	RackDeviceNames.CachebyClearwater = 'cachebyclearwater';
+	RackDeviceNames.DatabyClearwater = 'databyclearwater';
 
 	RackDevices.WebbyClearwater = {
-		"name":	"Web by Clearwater",
+		"name":	"WebbyClearwater",
 		"units": 4,
 		"price": 1,
 		"clockRate": 100,
 		"power": 1000,
 		"producedHeat": 10,
 		"webserverThroughput": 1000000,
-		"url":"images/racks/WebserverX.png",
+		// "url":"images/racks/WebserverX.png",
 		"requirements": {
 			"Firewall": 1,
 			"VirtualHardware": 1,
@@ -103,14 +103,14 @@ exports.onBackgroundWorkerStart = () => {
 	};
 
 	RackDevices.CachebyClearwater = {
-		"name": "Cache by Clearwater",
+		"name": "CachebyClearwater",
 		"units": 4,
 		"price": 1,
 		"clockRate":100,
 		"power":1000,
 		"producedHeat":10,
 		"cacheThroughput":1000000,
-		"url":"images/racks/CacheserverX.png",
+		// "url":"images/racks/CacheserverX.png",
 		"requirements": {
 			"Firewall":1,
 			"VirtualHardware":1,
@@ -119,14 +119,14 @@ exports.onBackgroundWorkerStart = () => {
 	};
 
 	RackDevices.DatabyClearwater = {
-		"name": "Data by Clearwater",
+		"name": "DatabyClearwater",
 		"units": 4,
 		"price": 1,
 		"clockRate": 100,
 		"power": 1000,
 		"producedHeat": 10,
 		"databaseThroughput": 1000000,
-		"url":"images/racks/DatabaseserverX.png",
+		// "url":"images/racks/DatabaseserverX.png",
 		"requirements": {
 			"Firewall": 1,
 			"VirtualHardware": 1,
@@ -138,13 +138,13 @@ exports.onBackgroundWorkerStart = () => {
 	ResearchItems.push({
 			category: "Hosting",
 			faIcon: "fa-server",
-			name: "Clearwater Inc. Serverpack",
+			name: "ClearwaterIncServerpack",
 			points: 1,
 			unlockType: "RackDevices",
 			unlocks: [
-				"Web by Clearwater",
-				"Cache by Clearwater",
-				"Data by Clearwater",
+				"WebbyClearwater",
+				"CachebyClearwater",
+				"DatabyClearwater",
 			]
 	});
 
